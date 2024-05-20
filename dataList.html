@@ -21,6 +21,8 @@
         return null;
     }
 
+    var dataList = null;
+
     (function() {
         const dataList = document.getElementById('dataList');
         var index = 0;
@@ -31,11 +33,11 @@
                     index ++ ;
                     const a = document.createElement('a');
                     a.href = "#";
-                    a.textContent = index + "、" + data.title.substring(0,20) + "……";
+                    a.textContent = index + "、" + data.title.substring(0,30) + "……";
                     a.addEventListener('click', function(e) {
                         e.preventDefault(); // 阻止链接的默认行为
                         // 跳转到明细页面
-                        callParentMethod(data.url,index,data.title);
+                        callParentMethod(data.url,index,data.title,data);
                     });
                     dataList.appendChild(a);
                     dataList.appendChild(document.createElement('br'));
@@ -50,9 +52,9 @@
             });
     })();
 
-    function callParentMethod(url,index,title) {
+    function callParentMethod(url,index,title,dataList) {
         // 使用 window.parent 访问父页面的 window 对象
-        window.parent.playSong(url,index,title); // 调用父页面的方法
+        window.parent.playSong(url,index,title,dataList); // 调用父页面的方法
     }
 
 
