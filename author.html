@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二页面</title>
+    <script type="text/javascript" src="./js/data.js"></script>
+</head>
+<body>
+
+<div id="authors"></div>
+
+
+<!--<button onclick="callParentMethod()">调用父页面方法</button>-->
+<!--<a href="dataList.html" >跳转到第三页面</a>-->
+
+<!-- 注意：这里没有<html>, <head>, <body>标签，因为我们只加载内容到#content中 -->
+</body>
+
+<script>
+
+    const authors = document.getElementById('authors');
+    (function() {
+        fetch('https://xiongod.github.io/authorList.json') // 替换为你的API URL
+            .then(response => response.json()) // 解析响应为JSON
+            .then(data => {
+                data.forEach(author => {
+
+                    const authorName = document.createElement('h4');
+                    authorName.style.color = 'red'
+                    authorName.style.fontWeight = 'bold';
+                    const dataList = document.createElement('div');
+                    authorName.textContent = author.channel
+
+                    author.unit.forEach(unit => {
+                        const a = document.createElement('a');
+                        a.href = "#";
+                        a.textContent = unit.title + "-" + unit.published
+                        a.addEventListener('click', function(e) {
+                            e.preventDefault(); // 阻止链接的默认行为
+                            // 跳转到明细页面
+                            goToPage(unit.url);
+                        });
+                        dataList.appendChild(a)
+                        dataList.appendChild(document.createElement('br'))
+                    })
+
+                    authors.appendChild(authorName);
+                    authors.appendChild(dataList);
+                    authors.appendChild(document.createElement('hr'));
+                })
+                // 你可以在这里进一步处理数据，例如更新页面上的某些元素
+
+            })
+            .catch(error => {
+                console.error('Error:', error); // 在控制台打印错误
+            });
+    })();
+
+    function goToPage(url) {
+        // 构造带有查询参数的URL
+        var url = 'dataList.html?url=' + url;
+        // 跳转到新页面
+        window.location.href = url;
+    }
+
+</script>
+</html>

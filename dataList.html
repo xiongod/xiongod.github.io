@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="dataList"></div>
+</body>
+
+<script>
+    function getQueryParam(name) {
+        var search = window.location.search.substring(1);
+        var params = search.split("&");
+        for (var i = 0; i < params.length; i++) {
+            var val = params[i].split("=");
+            if (val[0] == name) {
+                return val[1];
+            }
+        }
+        return null;
+    }
+
+    (function() {
+        const dataList = document.getElementById('dataList');
+        var index = 0;
+        fetch(getQueryParam('url')) // 替换为你的API URL
+            .then(response => response.json()) // 解析响应为JSON
+            .then(data => {
+                data.forEach(data => {
+                    index ++ ;
+                    const a = document.createElement('a');
+                    a.href = "#";
+                    a.textContent = index + "、" + data.title.substring(0,20) + "……";
+                    a.addEventListener('click', function(e) {
+                        e.preventDefault(); // 阻止链接的默认行为
+                        // 跳转到明细页面
+                        callParentMethod(data.url,index,data.title);
+                    });
+                    dataList.appendChild(a);
+                    dataList.appendChild(document.createElement('br'));
+                    dataList.appendChild(document.createElement('br'));
+                    //dataList.appendChild(document.createElement('hr'));
+                })
+                // 你可以在这里进一步处理数据，例如更新页面上的某些元素
+
+            })
+            .catch(error => {
+                console.error('Error:', error); // 在控制台打印错误
+            });
+    })();
+
+    function callParentMethod(url,index,title) {
+        // 使用 window.parent 访问父页面的 window 对象
+        window.parent.playSong(url,index,title); // 调用父页面的方法
+    }
+
+
+</script>
+</html>
