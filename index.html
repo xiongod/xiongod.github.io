@@ -49,22 +49,28 @@
     var currentIndex = 0;
 
     // 播放歌曲
-    function playSong(url,index,title,dataList) {
+    function playSong(url,title,dataList) {
+        var index = 0
+        for (var i = 0; i < dataList.length; i++){
+            index ++ ;
+            if (dataList[i].url === url){
+                currentIndex =index
+                break
+            }
+        }
         const audioPlayer = document.getElementById('audio-player');
         audioPlayer.src = url; // 设置音频文件的URL
         audioPlayer.play(); // 播放音频
         const newPlay = document.getElementById('newPlay');
-        var text = "正在播放："+"  "+index+"  "+title
+        var text = "正在播放："+"  "+currentIndex+"  "+title
         newPlay.textContent = text;
-        currentIndex = index - 1;
+        currentIndex = currentIndex - 1;
         audioFiles = dataList;
     }
 
-
-
     function playAudio(index) {
         var audio = document.getElementById('audio-player');
-        audio.src = audioFiles[index];
+        audio.src = audioFiles[index].url;
         audio.load();
         audio.play();
     }
