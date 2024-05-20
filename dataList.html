@@ -39,7 +39,7 @@
                         e.preventDefault(); // 阻止链接的默认行为
                         // 跳转到明细页面
                         data.published = '1'
-                        callParentMethod(data,data.url);
+                        callParentMethod(data,data[index].url);
                     });
                     dataList.appendChild(a);
                     dataList.appendChild(document.createElement('br'));
