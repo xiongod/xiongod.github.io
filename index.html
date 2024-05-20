@@ -53,6 +53,7 @@
         var url  = "";
         var title  = "";
         for (var i = 0; i < dataList.length; i++){
+            alert(dataList[i].published )
             if (dataList[i].published == "1"){
                 currentIndex =i
                 url = dataList[i].url
@@ -60,7 +61,7 @@
                 break
             }
         }
-        alert(currentIndex)
+        //alert(currentIndex)
         const audioPlayer = document.getElementById('audio-player');
         audioPlayer.src = url; // 设置音频文件的URL
         audioPlayer.play(); // 播放音频
