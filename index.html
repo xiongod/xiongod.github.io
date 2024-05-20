@@ -50,10 +50,11 @@
 
     // 播放歌曲
     function playSong(dataList) {
+        console.log(JSON.stringify(dataList))
         var url  = "";
         var title  = "";
         for (var i = 0; i < dataList.length; i++){
-            alert(dataList[i].published )
+            alert(dataList[i].published)
             if (dataList[i].published == "1"){
                 currentIndex =i
                 url = dataList[i].url
