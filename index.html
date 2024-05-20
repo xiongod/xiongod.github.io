@@ -49,10 +49,14 @@
     var currentIndex = 0;
 
     // 播放歌曲
-    function playSong(url,title,dataList) {
+    function playSong(dataList) {
+        var url  = "";
+        var title  = "";
         for (var i = 0; i < dataList.length; i++){
-            if (dataList[i].url === url){
+            if (dataList[i].published == "1"){
                 currentIndex =i
+                url = dataList[i].url
+                title = dataList[i].title
                 break
             }
         }
