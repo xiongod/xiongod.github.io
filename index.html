@@ -64,7 +64,7 @@
 
     function playAudio(index) {
         var audio = document.getElementById('audio-player');
-        audio.src = audioFiles[index];
+        audio.src = audioFiles[index].url;
         audio.load();
         audio.play();
     }
