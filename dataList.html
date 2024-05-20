@@ -28,8 +28,8 @@
         var index = 0;
         fetch(getQueryParam('url')) // 替换为你的API URL
             .then(response => response.json()) // 解析响应为JSON
-            .then(data => {
-                data.forEach(data => {
+            .then(dataAll => {
+                dataAll.forEach(data => {
 
                     const a = document.createElement('a');
                     a.href = "#";
@@ -38,8 +38,7 @@
                     a.addEventListener('click', function(e) {
                         e.preventDefault(); // 阻止链接的默认行为
                         // 跳转到明细页面
-                        data.published = '1'
-                        callParentMethod(data,data[index].url);
+                        callParentMethod(dataAll,data.url);
                     });
                     dataList.appendChild(a);
                     dataList.appendChild(document.createElement('br'));
@@ -55,9 +54,9 @@
             });
     })();
 
-    function callParentMethod(dataList,obj) {
+    function callParentMethod(dataList,url) {
         // 使用 window.parent 访问父页面的 window 对象
-        window.parent.playSong(dataList,obj); // 调用父页面的方法
+        window.parent.playSong(dataList,url); // 调用父页面的方法
     }
 
 
