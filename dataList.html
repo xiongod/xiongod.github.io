@@ -34,7 +34,7 @@
                     const a = document.createElement('a');
                     a.href = "#";
                     a.textContent = (index+1) + "、" + data.title.substring(0,30) + "……";
-                    a.id = index+"";
+                    a.id = data.id;
                     a.addEventListener('click', function(e) {
                         e.preventDefault(); // 阻止链接的默认行为
                         // 播放
@@ -60,10 +60,25 @@
     })();
 
     function callParentMethod(dataList,id) {
+        document.getElementById(id).style.color = 'rgb(113,110,110)';
         // 访问父页面播放
         window.parent.playSong(dataList,id); // 调用父页面的方法
     }
 
 
+
+    window.addEventListener('message', function(event) {
+        // 检查消息来源，确保只处理来自父页面的消息
+        if (event.origin === window.parent.origin) {
+            // 根据消息内容执行相应的函数
+            if (event.data === 'callFunction') {
+                myFunction();
+            }
+        }
+    }, false);
+
+    function myFunction() {
+        alert('Function called from parent page!');
+    }
 </script>
 </html>

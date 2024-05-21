@@ -32,11 +32,11 @@
     <script type="text/javascript" src="./dealCookies.js"></script>
 </head>
 <body>
-<div id="header" class="ellipsis">
+<div id="header" class="ellipsis" onclick="changeColor()">
     正在播放：
 </div>
 <div id="content">
-    <iframe src="author.html" width="100%" height="100%" style="border: none;"></iframe>
+    <iframe id="myIframe" src="author.html" width="100%" height="100%" style="border: none;"></iframe>
 </div>
 
 
@@ -81,7 +81,6 @@
             readStr = readStr + "-" + id
             setCookieWithArray("readStr",readStr)
         }
-
     }
 
     function playNext() {
@@ -100,6 +99,18 @@
             playNext();
         });
     };
+
+
+    function changeColor(){
+        var iframe = document.getElementById('myIframe');
+        if (iframe.contentWindow && iframe.contentWindow.document) {
+            // 确保iframe加载的是同源的页面
+            if (iframe.contentWindow.location.origin === window.location.origin) {
+                // 调用子页面上的函数
+                iframe.contentWindow.postMessage('callFunction', '*');
+            }
+        }
+    }
 </script>
 </body>
 </html>
