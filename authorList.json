@@ -45,5 +45,52 @@
 				"published": "2019"
 			}
 		]
+	},
+	{
+		"channel": "哈利波特",
+		"unit": [
+			{
+				"title": "哈利波特",
+				"url": "https://xiongod.github.io/halibote1/js/data.js",
+				"sort": "7",
+				"published": "第一部"
+			},
+			{
+				"title": "哈利波特",
+				"url": "https://xiongod.github.io/halibote2/js/data.js",
+				"sort": "6",
+				"published": "第二部"
+			},
+			{
+				"title": "哈利波特",
+				"url": "https://xiongod.github.io/halibote3/js/data.js",
+				"sort": "5",
+				"published": "第三部"
+			},
+			{
+				"title": "哈利波特",
+				"url": "https://xiongod.github.io/halibote4/js/data.js",
+				"sort": "4",
+				"published": "第四部"
+			},
+			{
+				"title": "哈利波特",
+				"url": "https://xiongod.github.io/halibote5/js/data.js",
+				"sort": "3",
+				"published": "第五部"
+			},
+			{
+				"title": "哈利波特",
+				"url": "https://xiongod.github.io/halibote6/js/data.js",
+				"sort": "2",
+				"published": "第六部"
+			},
+			{
+				"title": "哈利波特",
+				"url": "https://xiongod.github.io/halibote7/js/data.js",
+				"sort": "1",
+				"published": "第七部"
+			}
+		]
 	}
 ]
