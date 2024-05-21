@@ -7,7 +7,7 @@
     <!--<script type="text/javascript" src="./js/data.js"></script>-->
 </head>
 <body>
-
+<a href="https://xiongood.github.io/copyYoutube/">进入每日新闻>></a>
 <div id="authors"></div>
 
 
@@ -30,6 +30,8 @@
                     authorName.style.color = 'red'
                     authorName.style.fontWeight = 'bold';
                     const dataList = document.createElement('div');
+                    dataList.id = author.channel
+                    dataList.setAttribute('name', 'dataList');
                     authorName.textContent = author.channel
 
                     author.unit.forEach(unit => {
@@ -44,7 +46,13 @@
                         dataList.appendChild(a)
                         dataList.appendChild(document.createElement('br'))
                     })
+                    dataList.hidden = true
 
+                    authorName.addEventListener('click', function(e) {
+                        e.preventDefault(); // 阻止链接的默认行为
+                        // 跳转到明细页面
+                        openList(author.channel);
+                    });
                     authors.appendChild(authorName);
                     authors.appendChild(dataList);
                     authors.appendChild(document.createElement('hr'));
@@ -57,6 +65,17 @@
             });
     })();
 
+
+    function openList(channel) {
+        // 关闭其他类别
+        var dataList = document.getElementsByName("dataList")
+        for (let i = 0; i < dataList.length; i++) {
+            dataList[i].hidden=true
+        }
+
+        // 打开当前列表
+        document.getElementById(channel).hidden=false
+    }
     function goToPage(url) {
         // 构造带有查询参数的URL
         var url = 'dataList.html?url=' + url;
