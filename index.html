@@ -32,7 +32,7 @@
     <script type="text/javascript" src="./dealCookies.js"></script>
 </head>
 <body>
-<div id="header" class="ellipsis" onclick="changeColor()">
+<div id="header" class="ellipsis" >
     正在播放：
 </div>
 <div id="content">
@@ -81,6 +81,8 @@
             readStr = readStr + "-" + id
             setCookieWithArray("readStr",readStr)
         }
+        //修改子页面颜色标记已读
+        changeColor(id)
     }
 
     function playNext() {
@@ -101,13 +103,16 @@
     };
 
 
-    function changeColor(){
+    function changeColor(id){
         var iframe = document.getElementById('myIframe');
         if (iframe.contentWindow && iframe.contentWindow.document) {
             // 确保iframe加载的是同源的页面
             if (iframe.contentWindow.location.origin === window.location.origin) {
                 // 调用子页面上的函数
-                iframe.contentWindow.postMessage('callFunction', '*');
+                iframe.contentWindow.postMessage({
+                    action: 'callFunction',
+                    id: id
+                }, '*');
             }
         }
     }
