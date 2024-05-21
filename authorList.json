@@ -1,45 +1,45 @@
 [
 	{
-		"channel": "ÄÔ¶´ÎÚÍĞ°î",
+		"channel": "è„‘æ´ä¹Œæ‰˜é‚¦",
 		"unit": [
 			{
-				"title": "ÄÔ¶´ÎÚÍĞ°î",
+				"title": "è„‘æ´ä¹Œæ‰˜é‚¦",
 				"url": "https://xiongod.github.io/ndwtbNew/js/data.js",
 				"sort": "7",
 				"published": "new"
 			},
 			{
-				"title": "ÄÔ¶´ÎÚÍĞ°î",
+				"title": "è„‘æ´ä¹Œæ‰˜é‚¦",
 				"url": "https://xiongod.github.io/ndwtb2024/js/data.js",
 				"sort": "6",
 				"published": "2024"
 			},
 			{
-				"title": "ÄÔ¶´ÎÚÍĞ°î",
+				"title": "è„‘æ´ä¹Œæ‰˜é‚¦",
 				"url": "https://xiongod.github.io/ndwtb2023/js/data.js",
 				"sort": "5",
 				"published": "2023"
 			},
 			{
-				"title": "ÄÔ¶´ÎÚÍĞ°î",
+				"title": "è„‘æ´ä¹Œæ‰˜é‚¦",
 				"url": "https://xiongod.github.io/ndwtb2022/js/data.js",
 				"sort": "4",
 				"published": "2022"
 			},
 			{
-				"title": "ÄÔ¶´ÎÚÍĞ°î",
+				"title": "è„‘æ´ä¹Œæ‰˜é‚¦",
 				"url": "https://xiongod.github.io/ndwtb2021/js/data.js",
 				"sort": "3",
 				"published": "2021"
 			},
 			{
-				"title": "ÄÔ¶´ÎÚÍĞ°î",
+				"title": "è„‘æ´ä¹Œæ‰˜é‚¦",
 				"url": "https://xiongod.github.io/ndwtb2020/js/data.js",
 				"sort": "2",
 				"published": "2020"
 			},
 			{
-				"title": "ÄÔ¶´ÎÚÍĞ°î",
+				"title": "è„‘æ´ä¹Œæ‰˜é‚¦",
 				"url": "https://xiongod.github.io/ndwtb2019/js/data.js",
 				"sort": "1",
 				"published": "2019"
@@ -47,49 +47,49 @@
 		]
 	},
 	{
-		"channel": "¹şÀû²¨ÌØ",
+		"channel": "å“ˆåˆ©æ³¢ç‰¹",
 		"unit": [
 			{
-				"title": "¹şÀû²¨ÌØ",
+				"title": "å“ˆåˆ©æ³¢ç‰¹",
 				"url": "https://xiongod.github.io/halibote1/js/data.js",
 				"sort": "7",
-				"published": "µÚÒ»²¿"
+				"published": "ç¬¬ä¸€éƒ¨"
 			},
 			{
-				"title": "¹şÀû²¨ÌØ",
+				"title": "å“ˆåˆ©æ³¢ç‰¹",
 				"url": "https://xiongod.github.io/halibote2/js/data.js",
 				"sort": "6",
-				"published": "µÚ¶ş²¿"
+				"published": "ç¬¬äºŒéƒ¨"
 			},
 			{
-				"title": "¹şÀû²¨ÌØ",
+				"title": "å“ˆåˆ©æ³¢ç‰¹",
 				"url": "https://xiongod.github.io/halibote3/js/data.js",
 				"sort": "5",
-				"published": "µÚÈı²¿"
+				"published": "ç¬¬ä¸‰éƒ¨"
 			},
 			{
-				"title": "¹şÀû²¨ÌØ",
+				"title": "å“ˆåˆ©æ³¢ç‰¹",
 				"url": "https://xiongod.github.io/halibote4/js/data.js",
 				"sort": "4",
-				"published": "µÚËÄ²¿"
+				"published": "ç¬¬å››éƒ¨"
 			},
 			{
-				"title": "¹şÀû²¨ÌØ",
+				"title": "å“ˆåˆ©æ³¢ç‰¹",
 				"url": "https://xiongod.github.io/halibote5/js/data.js",
 				"sort": "3",
-				"published": "µÚÎå²¿"
+				"published": "ç¬¬äº”éƒ¨"
 			},
 			{
-				"title": "¹şÀû²¨ÌØ",
+				"title": "å“ˆåˆ©æ³¢ç‰¹",
 				"url": "https://xiongod.github.io/halibote6/js/data.js",
 				"sort": "2",
-				"published": "µÚÁù²¿"
+				"published": "ç¬¬å…­éƒ¨"
 			},
 			{
-				"title": "¹şÀû²¨ÌØ",
+				"title": "å“ˆåˆ©æ³¢ç‰¹",
 				"url": "https://xiongod.github.io/halibote7/js/data.js",
 				"sort": "1",
-				"published": "µÚÆß²¿"
+				"published": "ç¬¬ä¸ƒéƒ¨"
 			}
 		]
 	}
