@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" src="./dealCookies.js"></script>
 </head>
 <body>
 <div id="dataList"></div>
@@ -30,16 +31,20 @@
             .then(response => response.json()) // 解析响应为JSON
             .then(dataAll => {
                 dataAll.forEach(data => {
-
                     const a = document.createElement('a');
                     a.href = "#";
                     a.textContent = (index+1) + "、" + data.title.substring(0,30) + "……";
                     a.id = index+"";
                     a.addEventListener('click', function(e) {
                         e.preventDefault(); // 阻止链接的默认行为
-                        // 跳转到明细页面
-                        callParentMethod(dataAll,data.url);
+                        // 播放
+                        callParentMethod(dataAll,data.id);
                     });
+                    // 取出来cookie，如果已读，则改变颜色
+                    var readStr = getCookieWithArray("readStr")
+                    if (readStr.indexOf(data.id)!=-1){
+                        a.style.color = 'rgb(113,110,110)';
+                    }
                     dataList.appendChild(a);
                     dataList.appendChild(document.createElement('br'));
                     dataList.appendChild(document.createElement('br'));
@@ -54,9 +59,9 @@
             });
     })();
 
-    function callParentMethod(dataList,url) {
-        // 使用 window.parent 访问父页面的 window 对象
-        window.parent.playSong(dataList,url); // 调用父页面的方法
+    function callParentMethod(dataList,id) {
+        // 访问父页面播放
+        window.parent.playSong(dataList,id); // 调用父页面的方法
     }
 
 
