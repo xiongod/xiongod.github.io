@@ -22,20 +22,21 @@
         fetch('https://xiongod.github.io/authorList.json') // 替换为你的API URL
             .then(response => response.json()) // 解析响应为JSON
             .then(data => {
+                var titleIndex = 1
                 data.forEach(author => {
 
-                    const authorName = document.createElement('h4');
+                    const authorName = document.createElement('div');
                     authorName.style.color = 'red'
                     authorName.style.fontWeight = 'bold';
                     const dataList = document.createElement('div');
                     dataList.id = author.channel
                     dataList.setAttribute('name', 'dataList');
-                    authorName.textContent = author.channel
-
+                    authorName.textContent = titleIndex+'、'+author.channel
+                    var index = 1
                     author.unit.forEach(unit => {
                         const a = document.createElement('a');
                         a.href = "#";
-                        a.textContent = unit.title + "-" + unit.published
+                        a.textContent = index+"、"+unit.title + "-" + unit.published
                         a.addEventListener('click', function(e) {
                             e.preventDefault(); // 阻止链接的默认行为
                             // 跳转到明细页面
@@ -43,6 +44,7 @@
                         });
                         dataList.appendChild(a)
                         dataList.appendChild(document.createElement('br'))
+                        index ++
                     })
                     dataList.hidden = true
 
@@ -53,7 +55,9 @@
                     });
                     authors.appendChild(authorName);
                     authors.appendChild(dataList);
+                    authors.appendChild(document.createElement('br'));
                     //authors.appendChild(document.createElement('hr'));
+                    titleIndex++
                 })
                 // 你可以在这里进一步处理数据，例如更新页面上的某些元素
 
