@@ -92,5 +92,51 @@
 				"published": "第七部"
 			}
 		]
+	},
+	{
+		"channel": "世纪三部曲",
+		"unit": [
+			{
+				"title": "世纪三部曲",
+				"url": "https://xiongod.github.io/sjsbq1/js/data.json",
+				"sort": "1",
+				"published": "第一部"
+			},
+			{
+				"title": "世纪三部曲",
+				"url": "https://xiongod.github.io/sjsbq2/js/data.json",
+				"sort": "2",
+				"published": "第二部"
+			},
+			{
+				"title": "世纪三部曲",
+				"url": "https://xiongod.github.io/sjsbq3/js/data.json",
+				"sort": "3",
+				"published": "第三部"
+			}
+		]
+	},
+	{
+		"channel": "中世纪三部曲",
+		"unit": [
+			{
+				"title": "中世纪三部曲",
+				"url": "https://xiongod.github.io/zsjsbq1/js/data.json",
+				"sort": "1",
+				"published": "第一部"
+			},
+			{
+				"title": "中世纪三部曲",
+				"url": "https://xiongod.github.io/zsjsbq2/js/data.json",
+				"sort": "2",
+				"published": "第二部"
+			},
+			{
+				"title": "中世纪三部曲",
+				"url": "https://xiongod.github.io/zsjsbq3/js/data.json",
+				"sort": "3",
+				"published": "第三部"
+			}
+		]
 	}
 ]
