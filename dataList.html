@@ -11,23 +11,23 @@
 
 <script>
     function getQueryParam(name) {
-        var search = window.location.search.substring(1);
-        var params = search.split("&");
-        for (var i = 0; i < params.length; i++) {
-            var val = params[i].split("=");
-            if (val[0] == name) {
+        const search = window.location.search.substring(1);
+        const params = search.split("&");
+        for (let i = 0; i < params.length; i++) {
+            const val = params[i].split("=");
+            if (val[0] === name) {
                 return val[1];
             }
         }
         return null;
     }
 
-    var dataList = null;
+    const dataList = null;
     let listeningId = null;
 
     (function() {
         const dataList = document.getElementById('dataList');
-        var index = 0;
+        let index = 0;
         fetch(getQueryParam('url')) // 替换为你的API URL
             .then(response => response.json()) // 解析响应为JSON
             .then(dataAll => {
@@ -47,8 +47,8 @@
                         callParentMethod(dataAll,data.id);
                     });
                     // 取出来cookie，如果已读，则改变颜色
-                    var readStr = getCookieWithArray("readStr")
-                    if (readStr.indexOf(data.id)!=-1){
+                    const readStr = getCookieWithArray("readStr");
+                    if (readStr.indexOf(data.id)!==-1){
                         a.style.color = 'rgb(113,110,110)';
                         listeningId=data.id;
                     }
@@ -61,7 +61,7 @@
                 // 你可以在这里进一步处理数据，例如更新页面上的某些元素
                 // 滚动到正在听的那个音频
                 if (listeningId!=null){
-                    var element = document.getElementById(listeningId);
+                    const element = document.getElementById(listeningId);
                     if (element) {
                         element.scrollIntoView({ behavior: 'smooth' }); // 平滑滚动
                     }
@@ -70,7 +70,7 @@
             .catch(error => {
                 console.error('Error:', error); // 在控制台打印错误
             });
-        var element = document.getElementById('34ee257177fe42b0a9fe14dd96d2e08d');
+        const element = document.getElementById('34ee257177fe42b0a9fe14dd96d2e08d');
         alert(element.getAttribute("id"))
 
     })();

@@ -15,10 +15,6 @@
             overflow-y: auto;
             padding: 10px;
         }
-        #footer {
-            height: 50px;
-            background-color: cornflowerblue;
-        }
         .ellipsis {
             /* 设置宽度，如果需要的话（也可以不设置，让元素自然流动） */
             /* width: 100%; 或其他具体值 */
@@ -68,15 +64,15 @@
 </div>
 
 <script>
-    var audioFiles = [];
-    var currentIndex = 0;
+    let audioFiles = [];
+    let currentIndex = 0;
 
     // 播放歌曲
     function playSong(dataList,id) {
         audioFiles = dataList;
-        for (var i = 0; i < dataList.length; i++){
+        for (let i = 0; i < dataList.length; i++){
             //alert(dataList[i].published)
-            if (dataList[i].id == id){
+            if (dataList[i].id === id){
                 currentIndex =i
                 break
             }
@@ -87,20 +83,19 @@
 
     function playAudio(index) {
         // 播放
-        var audio = document.getElementById('audio-player');
+        const audio = document.getElementById('audio-player');
         audio.src = audioFiles[index].url;
         audio.load();
         audio.play();
         // 正在播放提示
         const header = document.getElementById('header');
-        var text = "正在播放："+(index+1)+audioFiles[index].title
-        header.textContent = text;
+        header.textContent = "正在播放："+(index+1)+audioFiles[index].title;
         // 记录 cookies
         // 取出cookies
-        var  id  = audioFiles[index].id
-        var readStr = getCookieWithArray("readStr")
+        const id = audioFiles[index].id;
+        let readStr = getCookieWithArray("readStr");
         // 判断是否存在，不存在则新增，存在则不管
-        if (readStr.indexOf(id)==-1){
+        if (readStr.indexOf(id)===-1){
             readStr = readStr + "-" + id
             setCookieWithArray("readStr",readStr)
         }
@@ -119,7 +114,7 @@
     // 页面加载时自动播放第一曲
     window.onload = function() {
         // 为音频元素添加ended事件监听器，以便在音频结束时自动播放下一曲
-        var audio = document.getElementById('audio-player');
+        const audio = document.getElementById('audio-player');
         audio.addEventListener('ended', function() {
             playNext();
         });
@@ -127,7 +122,7 @@
 
 
     function changeColor(id){
-        var iframe = document.getElementById('myIframe');
+        const iframe = document.getElementById('myIframe');
         if (iframe.contentWindow && iframe.contentWindow.document) {
             // 确保iframe加载的是同源的页面
             if (iframe.contentWindow.location.origin === window.location.origin) {

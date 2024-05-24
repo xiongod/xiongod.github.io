@@ -22,7 +22,7 @@
         fetch('https://xiongod.github.io/authorList.json') // 替换为你的API URL
             .then(response => response.json()) // 解析响应为JSON
             .then(data => {
-                var titleIndex = 1
+                let titleIndex = 1;
                 data.forEach(author => {
 
                     const authorName = document.createElement('div');
@@ -32,7 +32,7 @@
                     dataList.id = author.channel
                     dataList.setAttribute('name', 'dataList');
                     authorName.textContent = titleIndex+'、'+author.channel
-                    var index = 1
+                    let index = 1;
                     author.unit.forEach(unit => {
                         const a = document.createElement('a');
                         a.href = "#";
@@ -69,10 +69,10 @@
 
 
     function openList(channel) {
-        var divObj = document.getElementById(channel)
+        const divObj = document.getElementById(channel);
         if (divObj.hasAttribute('hidden')){
             // 关闭其他类别
-            var dataList = document.getElementsByName("dataList")
+            const dataList = document.getElementsByName("dataList");
             for (let i = 0; i < dataList.length; i++) {
                 dataList[i].hidden=true
             }
@@ -83,7 +83,7 @@
     }
     function goToPage(url) {
         // 构造带有查询参数的URL
-        var url = 'dataList.html?url=' + url;
+        url = 'dataList.html?url=' + url;
         // 跳转到新页面
         window.location.href = url;
     }
