@@ -23,6 +23,7 @@
     }
 
     var dataList = null;
+    let listeningId = null;
 
     (function() {
         const dataList = document.getElementById('dataList');
@@ -44,6 +45,7 @@
                     var readStr = getCookieWithArray("readStr")
                     if (readStr.indexOf(data.id)!=-1){
                         a.style.color = 'rgb(113,110,110)';
+                        listeningId=data.id;
                     }
                     dataList.appendChild(a);
                     dataList.appendChild(document.createElement('br'));
@@ -52,13 +54,29 @@
                     index ++ ;
                 })
                 // 你可以在这里进一步处理数据，例如更新页面上的某些元素
-
+                // 滚动到正在听的那个音频
+                if (listeningId!=null){
+                    var element = document.getElementById(listeningId);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' }); // 平滑滚动
+                    }
+                }
             })
             .catch(error => {
                 console.error('Error:', error); // 在控制台打印错误
             });
+        var element = document.getElementById('34ee257177fe42b0a9fe14dd96d2e08d');
+        alert(element.getAttribute("id"))
+
     })();
 
+    // document.addEventListener('DOMContentLoaded', (event) => {
+    //     var element = document.getElementById('34ee257177fe42b0a9fe14dd96d2e08d');
+    //     alert(element.getAttribute("id"))
+    //     if (element) {
+    //         element.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    // });
     function callParentMethod(dataList,id) {
         changeColor(id)
         // 访问父页面播放
