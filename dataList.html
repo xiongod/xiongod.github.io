@@ -34,7 +34,12 @@
                 dataAll.forEach(data => {
                     const a = document.createElement('a');
                     a.href = "#";
-                    a.textContent = (index+1) + "、" + data.title.substring(0,30) + "……";
+                    if (data.title.length > 30){
+                        a.textContent = (index+1) + "、" + data.title.substring(0,30) + "……";
+                    }else {
+                        a.textContent = (index+1) + "、" + data.title;
+                    }
+
                     a.id = data.id;
                     a.addEventListener('click', function(e) {
                         e.preventDefault(); // 阻止链接的默认行为
