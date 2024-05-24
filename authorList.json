@@ -146,19 +146,36 @@
 				"title": "人文通识",
 				"url": "https://xiongod.github.io/RenWenTongShiGeWu/js/data.json",
 				"sort": "1",
-				"published": "人文通识-格物篇"
+				"published": "格物篇"
 			},
 			{
 				"title": "人文通识",
 				"url": "https://xiongod.github.io/RenWenTongShiGuShi/js/data.json",
 				"sort": "2",
-				"published": "人文通识-故事篇"
+				"published": "故事篇"
 			},
 			{
 				"title": "人文通识",
 				"url": "https://xiongod.github.io/RenWenTongShiZheXue/js/data.json",
 				"sort": "3",
-				"published": "人文通识-哲学篇"
+				"published": "哲学篇"
+			}
+		]
+	},
+	{
+		"channel": "星球神话",
+		"unit": [
+			{
+				"title": "星球神话",
+				"url": "https://xiongod.github.io/RenWenTongShiGeWu/js/data.json",
+				"sort": "1",
+				"published": "第一部"
+			},
+			{
+				"title": "星球神话",
+				"url": "https://xiongod.github.io/RenWenTongShiGuShi/js/data.json",
+				"sort": "2",
+				"published": "第二部"
 			}
 		]
 	}
