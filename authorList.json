@@ -167,13 +167,13 @@
 		"unit": [
 			{
 				"title": "星球神话",
-				"url": "https://xiongod.github.io/RenWenTongShiGeWu/js/data.json",
+				"url": "https://xiongod.github.io/xqsh1/js/data.json",
 				"sort": "1",
 				"published": "第一部"
 			},
 			{
 				"title": "星球神话",
-				"url": "https://xiongod.github.io/RenWenTongShiGuShi/js/data.json",
+				"url": "https://xiongod.github.io/xqsh2/js/data.json",
 				"sort": "2",
 				"published": "第二部"
 			}
