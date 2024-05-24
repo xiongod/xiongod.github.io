@@ -48,12 +48,12 @@
 
                     authorName.addEventListener('click', function(e) {
                         e.preventDefault(); // 阻止链接的默认行为
-                        // 跳转到明细页面
+                        // 打开折叠
                         openList(author.channel);
                     });
                     authors.appendChild(authorName);
                     authors.appendChild(dataList);
-                    authors.appendChild(document.createElement('hr'));
+                    //authors.appendChild(document.createElement('hr'));
                 })
                 // 你可以在这里进一步处理数据，例如更新页面上的某些元素
 
@@ -65,14 +65,17 @@
 
 
     function openList(channel) {
-        // 关闭其他类别
-        var dataList = document.getElementsByName("dataList")
-        for (let i = 0; i < dataList.length; i++) {
-            dataList[i].hidden=true
+        var divObj = document.getElementById(channel)
+        if (divObj.hasAttribute('hidden')){
+            // 关闭其他类别
+            var dataList = document.getElementsByName("dataList")
+            for (let i = 0; i < dataList.length; i++) {
+                dataList[i].hidden=true
+            }
+            divObj.removeAttribute("hidden")
+        }else {
+            divObj.hidden =true
         }
-
-        // 打开当前列表
-        document.getElementById(channel).hidden=false
     }
     function goToPage(url) {
         // 构造带有查询参数的URL
