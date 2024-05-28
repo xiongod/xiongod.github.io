@@ -70,18 +70,9 @@
             .catch(error => {
                 console.error('Error:', error); // 在控制台打印错误
             });
-        const element = document.getElementById('34ee257177fe42b0a9fe14dd96d2e08d');
-        alert(element.getAttribute("id"))
-
     })();
 
-    // document.addEventListener('DOMContentLoaded', (event) => {
-    //     var element = document.getElementById('34ee257177fe42b0a9fe14dd96d2e08d');
-    //     alert(element.getAttribute("id"))
-    //     if (element) {
-    //         element.scrollIntoView({ behavior: 'smooth' });
-    //     }
-    // });
+
     function callParentMethod(dataList,id) {
         changeColor(id)
         // 访问父页面播放
@@ -90,6 +81,7 @@
 
 
 
+    //监听父页面方法
     window.addEventListener('message', function(event) {
         // 检查消息来源，确保只处理来自父页面的消息
         if (event.origin === window.parent.origin) {
@@ -100,6 +92,7 @@
         }
     }, false);
 
+    // 修改颜色
     function changeColor(id) {
         document.getElementById(id).style.color = 'rgb(113,110,110)';
     }
