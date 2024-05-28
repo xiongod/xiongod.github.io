@@ -178,5 +178,16 @@
 				"published": "第二部"
 			}
 		]
+	},
+	{
+		"channel": "惠天说明朝往事",
+		"unit": [
+			{
+				"title": "惠天说明朝往事",
+				"url": "https://xiongod.github.io/htsmcws1/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			}
+		]
 	}
 ]
