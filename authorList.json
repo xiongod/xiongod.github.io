@@ -189,5 +189,16 @@
 				"published": "全集"
 			}
 		]
-	}
+	},
+    {
+        "channel": "大宇茶馆",
+        "unit": [
+            {
+                "title": "大宇茶馆",
+                "url": "https://xiongod.github.io/hstc/json/data.json",
+                "sort": "1",
+                "published": "话说唐朝"
+            }
+        ]
+    }
 ]
