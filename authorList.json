@@ -217,17 +217,17 @@
                 "sort": "1",
                 "published": "话说唐朝"
             },
+             {
+                 "title": "大宇茶馆",
+                 "url": "https://xiongod.github.io/hssc/json/data.json",
+                 "sort": "1",
+                 "published": "话说宋朝"
+             },
             {
                 "title": "大宇茶馆",
                 "url": "https://xiongod.github.io/hsnm/json/data.json",
                 "sort": "1",
                 "published": "话说南明"
-            },
-            {
-                "title": "大宇茶馆",
-                "url": "https://xiongod.github.io/hssc/json/data.json",
-                "sort": "1",
-                "published": "话说宋朝"
             }
         ]
     }
