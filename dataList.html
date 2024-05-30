@@ -34,8 +34,8 @@
                 dataAll.forEach(data => {
                     const a = document.createElement('a');
                     a.href = "#";
-                    if (data.title.length > 30){
-                        a.textContent = (index+1) + "、" + data.title.substring(0,30) + "……";
+                    if (data.title.length > 18){
+                        a.textContent = (index+1) + "、" + data.title.substring(0,18) + "……";
                     }else {
                         a.textContent = (index+1) + "、" + data.title;
                     }
