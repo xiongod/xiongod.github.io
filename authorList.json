@@ -163,26 +163,20 @@
 			{
 				"title": "人文通识",
 				"url": "https://xiongod.github.io/RenWenTongShiDianYing/json/data.json",
-				"sort": "4",
+				"sort": "3",
 				"published": "电影篇"
 			},
 			{
 				"title": "人文通识",
 				"url": "https://xiongod.github.io/RenWenTongShiXinLi/json/data.json",
-				"sort": "5",
+				"sort": "3",
 				"published": "心理篇"
 			},
 			{
 				"title": "人文通识",
 				"url": "https://xiongod.github.io/RenWenTongShiYiXue/json/data.json",
-				"sort": "6",
+				"sort": "3",
 				"published": "医学篇"
-			},
-			{
-				"title": "人文通识",
-				"url": "https://xiongod.github.io/renWenTongShiRenWu/json/data.json",
-				"sort": "7",
-				"published": "人物篇"
 			}
 		]
 	},
@@ -242,16 +236,5 @@
 				"published": "话说南明"
 			}
 		]
-	},
-	{
-        "channel": "儿童故事",
-        "unit": [
-            {
-                "title": "宝林",
-                "url": "https://xiongod.github.io/xiyouji/json/data.json",
-                "sort": "1",
-                "published": "西游记"
-            }
-        ]
-    }
+	}
 ]
