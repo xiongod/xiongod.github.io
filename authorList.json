@@ -177,6 +177,12 @@
 				"url": "https://xiongod.github.io/RenWenTongShiYiXue/json/data.json",
 				"sort": "3",
 				"published": "医学篇"
+			},
+			{
+				"title": "人文通识",
+				"url": "https://xiongod.github.io/renWenTongShiRenWu/json/data.json",
+				"sort": "3",
+				"published": "人物篇"
 			}
 		]
 	},
