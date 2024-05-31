@@ -244,14 +244,14 @@
 		]
 	},
 	{
-     		"channel": "儿童故事",
-     		"unit": [
-     			{
-     				"title": "宝林",
-     				"url": "https://xiongod.github.io/xiyouji/json/data.json",
-     				"sort": "1",
-     				"published": "西游记"
-     			}
-     		]
-     	},
+        "channel": "儿童故事",
+        "unit": [
+            {
+                "title": "宝林",
+                "url": "https://xiongod.github.io/xiyouji/json/data.json",
+                "sort": "1",
+                "published": "西游记"
+            }
+        ]
+    }
 ]
