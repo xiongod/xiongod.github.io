@@ -226,6 +226,17 @@
 		]
 	},
 	{
+		"channel": "网文故事",
+		"unit": [
+			{
+				"title": "斗破苍穹",
+				"url": "https://xiongod.github.io/dpcq/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			}
+		]
+	},
+	{
 		"channel": "大宇茶馆",
 		"unit": [
 			{
