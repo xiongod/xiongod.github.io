@@ -230,38 +230,56 @@
 		"unit": [
 			{
 				"title": "斗破苍穹",
-				"url": "https://xiongod.github.io/dpcq/json/data.json",
+				"url": "https://xiongod.github.io/dpcq1/data.json",
 				"sort": "1",
-				"published": "全集"
-			}
+				"published": "第一部"
+			},
+			{
+                "title": "斗破苍穹",
+                "url": "https://xiongod.github.io/dpcq2/data.json",
+                "sort": "2",
+                "published": "第二部"
+            },
+			{
+                "title": "斗破苍穹",
+                "url": "https://xiongod.github.io/dpcq3/data.json",
+                "sort": "3",
+                "published": "第三部"
+            }
 		]
 	},
 	{
 		"channel": "大宇茶馆",
 		"unit": [
 			{
-				"title": "大宇茶馆",
+				"title": "话说唐朝",
 				"url": "https://xiongod.github.io/hstc/json/data.json",
 				"sort": "1",
-				"published": "话说唐朝"
+				"published": "全集"
 			},
 			{
-				"title": "大宇茶馆",
+				"title": "话说宋朝",
 				"url": "https://xiongod.github.io/hssc/json/data.json",
 				"sort": "1",
-				"published": "话说宋朝"
+				"published": "全集"
 			},
 			{
-				"title": "大宇茶馆",
+				"title": "话说明朝",
 				"url": "https://xiongod.github.io/hsmc/json/data.json",
 				"sort": "1",
-				"published": "话说明朝"
+				"published": "全集"
 			},
 			{
-				"title": "大宇茶馆",
+				"title": "话说南明",
 				"url": "https://xiongod.github.io/hsnm/json/data.json",
 				"sort": "1",
-				"published": "话说南明"
+				"published": "全集"
+			},
+			{
+				"title": "话说清朝",
+				"url": "https://xiongod.github.io/hsqc/json/data.json",
+				"sort": "1",
+				"published": "全集"
 			}
 		]
 	}
