@@ -252,6 +252,12 @@
 		"channel": "大宇茶馆",
 		"unit": [
 			{
+				"title": "话说战国",
+				"url": "https://xiongod.github.io/xhszg/json/data.json",
+				"sort": "1",
+				"published": "全集(新)"
+			},
+			{
 				"title": "话说唐朝",
 				"url": "https://xiongod.github.io/hstc/json/data.json",
 				"sort": "1",
