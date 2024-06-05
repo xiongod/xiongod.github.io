@@ -252,10 +252,10 @@
 		"channel": "大宇茶馆",
 		"unit": [
 			{
-				"title": "话说战国",
+				"title": "新话说战国",
 				"url": "https://xiongod.github.io/xhszg/json/data.json",
 				"sort": "1",
-				"published": "全集(新)"
+				"published": "全集"
 			},
 			{
 				"title": "话说魏晋南北朝",
@@ -270,8 +270,20 @@
 				"published": "全集"
 			},
 			{
+				"title": "话说五代十国",
+				"url": "https://xiongod.github.io/hswdsg/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
 				"title": "话说宋朝",
 				"url": "https://xiongod.github.io/hssc/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "话说元朝",
+				"url": "https://xiongod.github.io/hsyc/json/data.json",
 				"sort": "1",
 				"published": "全集"
 			},
