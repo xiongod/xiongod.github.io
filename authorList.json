@@ -258,6 +258,12 @@
 				"published": "全集(新)"
 			},
 			{
+				"title": "话说魏晋南北朝",
+				"url": "https://xiongod.github.io/hswjnbc/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
 				"title": "话说唐朝",
 				"url": "https://xiongod.github.io/hstc/json/data.json",
 				"sort": "1",
