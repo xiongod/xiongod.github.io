@@ -226,6 +226,29 @@
 		]
 	},
 	{
+		"channel": "金庸听书",
+		"unit": [
+			{
+				"title": "鹿鼎记",
+				"url": "https://xiongod.github.io/ldj/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+                "title": "白马啸西风",
+                "url": "https://xiongod.github.io/bmxxf/json/data.json",
+                "sort": "2",
+                "published": "全集"
+            },
+			{
+                "title": "碧血剑",
+                "url": "https://xiongod.github.io/bxj/json/data.json",
+                "sort": "3",
+                "published": "全集"
+            }
+		]
+	},
+	{
 		"channel": "网文故事",
 		"unit": [
 			{
