@@ -245,6 +245,12 @@
                 "url": "https://xiongod.github.io/bxj/json/data.json",
                 "sort": "3",
                 "published": "全集"
+            },
+			{
+                "title": "飞狐外传",
+                "url": "https://xiongod.github.io/fhwz/json/data.json",
+                "sort": "4",
+                "published": "全集"
             }
 		]
 	},
@@ -277,6 +283,12 @@
 			{
 				"title": "新话说战国",
 				"url": "https://xiongod.github.io/xhszg/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "话说汉朝三国",
+				"url": "https://xiongod.github.io/hshcsg/json/data.json",
 				"sort": "1",
 				"published": "全集"
 			},
