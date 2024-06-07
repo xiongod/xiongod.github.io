@@ -251,6 +251,18 @@
                 "url": "https://xiongod.github.io/fhwz/json/data.json",
                 "sort": "4",
                 "published": "全集"
+            },
+			{
+                "title": "连城诀",
+                "url": "https://xiongod.github.io/lcj/json/data.json",
+                "sort": "4",
+                "published": "全集"
+            },
+			{
+                "title": "射雕英雄传",
+                "url": "https://xiongod.github.io/sdyxz/json/data.json",
+                "sort": "4",
+                "published": "全集"
             }
 		]
 	},
@@ -280,6 +292,12 @@
 	{
 		"channel": "大宇茶馆",
 		"unit": [
+			{
+				"title": "话说春秋战国",
+				"url": "https://xiongod.github.io/hscqzg/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
 			{
 				"title": "新话说战国",
 				"url": "https://xiongod.github.io/xhszg/json/data.json",
