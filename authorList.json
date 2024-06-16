@@ -383,6 +383,12 @@
 				"published": "全集"
 			},
 			{
+				"title": "话说蒋介石",
+				"url": "https://xiongod.github.io/hsjjs/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
 				"title": "中国历史未解之谜",
 				"url": "https://xiongod.github.io/zgliwjzm/data.json",
 				"sort": "1",
@@ -391,6 +397,30 @@
 			{
 				"title": "古代生活大揭秘",
 				"url": "https://xiongod.github.io/gdshdjm/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "影响中国的历史大事件",
+				"url": "https://xiongod.github.io/hslsdsj/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "抗美援朝实录",
+				"url": "https://xiongod.github.io/kmycsl/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "话说日本",
+				"url": "https://xiongod.github.io/hsrb/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "话说韩国",
+				"url": "https://xiongod.github.io/hshg/json/data.json",
 				"sort": "1",
 				"published": "全集"
 			}
