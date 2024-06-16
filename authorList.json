@@ -305,6 +305,12 @@
 				"published": "全集"
 			},
 			{
+				"title": "话说大秦",
+				"url": "https://xiongod.github.io/hsdq/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
 				"title": "话说汉朝三国",
 				"url": "https://xiongod.github.io/hshcsg/json/data.json",
 				"sort": "1",
@@ -313,6 +319,12 @@
 			{
 				"title": "话说魏晋南北朝",
 				"url": "https://xiongod.github.io/hswjnbc/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "话说隋朝",
+				"url": "https://xiongod.github.io/hsds/json/data.json",
 				"sort": "1",
 				"published": "全集"
 			},
@@ -355,6 +367,30 @@
 			{
 				"title": "话说清朝",
 				"url": "https://xiongod.github.io/hsqc/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "二战纵横录",
+				"url": "https://xiongod.github.io/ezzhl/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "话说张作霖",
+				"url": "https://xiongod.github.io/hszzl/json/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "中国历史未解之谜",
+				"url": "https://xiongod.github.io/zgliwjzm/data.json",
+				"sort": "1",
+				"published": "全集"
+			},
+			{
+				"title": "古代生活大揭秘",
+				"url": "https://xiongod.github.io/gdshdjm/json/data.json",
 				"sort": "1",
 				"published": "全集"
 			}
