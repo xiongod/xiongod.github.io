@@ -55,13 +55,16 @@
     正在播放：
 </div>
 <div id="content">
+    <button onclick="playAudio()">播放</button>
     <iframe id="myIframe" src="author.html" width="100%" height="100%" style="border: none;"></iframe>
+
 </div>
 
 
 <div id="music-player" style="text-align: center">
     <audio id="audio-player" controls></audio>
 </div>
+
 
 <script>
     let audioFiles = [];
@@ -81,36 +84,14 @@
         playAudio(currentIndex)
     }
 
-    var musicId = null;
-
     // 播放音乐
-    function playAudio(index) {
-        const id = audioFiles[index].id;
-        musicId = id;
+    function playAudio() {
         // 播放
         const audio = document.getElementById('audio-player');
-        audio.src = audioFiles[index].url;
-
-        // 从cookie中取出来播放记录
-        var playTime = getPlayTimeToCookie(id)
-        audio.currentTime = playTime;
-
+        audio.src = 'https://xiongod.github.io/sjecl/data/000.mp3'
         audio.load();
         audio.play();
-        // 正在播放提示
-        const header = document.getElementById('header');
-        header.textContent = "正在播放："+(index+1)+'、'+audioFiles[index].title;
-        // 记录 cookies
-        // 取出cookies
 
-        let readStr = getCookieWithArray("readStr");
-        // 判断是否存在，不存在则新增，存在则不管
-        if (readStr.indexOf(id)===-1){
-            readStr = readStr + "-" + id
-            setCookieWithArray("readStr",readStr)
-        }
-        //修改子页面颜色标记已读
-        changeColor(id)
     }
 
     // 播放下一曲
@@ -127,9 +108,6 @@
         // 为音频元素添加ended事件监听器，以便在音频结束时自动播放下一曲
         const audio = document.getElementById('audio-player');
         audio.addEventListener('ended', function() {
-            // 播放时间清除
-            deletePlayTimeToCookie(musicId)
-            // 播放下一曲
             playNext();
         });
     };
@@ -147,42 +125,6 @@
                 }, '*');
             }
         }
-    }
-
-
-    //把播放记录从cookie中取出来，然后继续播放
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     var audioPlayer = document.getElementById('audio-player');
-    //
-    //     // 监听loadedmetadata事件
-    //     audioPlayer.addEventListener('loadedmetadata', function() {
-    //         // 当元数据加载完成后，设置currentTime为10秒并播放
-    //         if (audioPlayer.currentTime < 10) { // 这一步其实是冗余的，因为默认currentTime是0
-    //             audioPlayer.currentTime = 10;
-    //             audioPlayer.play();
-    //         }
-    //     });
-    // });
-
-
-    // 设置定时器，每10秒执行一次checkTime函数
-    var intervalId = setInterval(checkTime, 10000);
-
-    // 检查并打印当前播放时间的函数，把播放到第几秒的数据，存到cookie中
-    function checkTime() {
-        const audioPlayer = document.getElementById('audio-player');
-        // 确保音频已经加载（可能不是必须的，但为了避免错误是个好习惯）
-        if (audioPlayer.readyState >= 10) { // readyState 3 意味着音频已经加载足够的数据可以播放
-            // 存当前播放时间到cookie
-            setPlayTimeToCookie(musicId,audioPlayer.currentTime)
-            //console.log('当前播放时间: ' + audioPlayer.currentTime + ' 秒');
-        }
-    }
-
-
-    // 如果需要，你可以添加一个函数来停止定时器
-    function stopTimer() {
-        clearInterval(intervalId);
     }
 </script>
 </body>
