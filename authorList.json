@@ -275,6 +275,18 @@
                 "url": "https://xiongod.github.io/sjecl/json/data.json",
                 "sort": "4",
                 "published": "全集"
+            },
+			{
+                "title": "天龙八部",
+                "url": "https://xiongod.github.io/tlbb/json/data.json",
+                "sort": "4",
+                "published": "第一部"
+            },
+			{
+                "title": "天龙八部",
+                "url": "https://xiongod.github.io/tlbb1/json/data.json",
+                "sort": "4",
+                "published": "第二部"
             }
 		]
 	},
@@ -298,6 +310,18 @@
                 "url": "https://xiongod.github.io/dpcq3/data.json",
                 "sort": "3",
                 "published": "第三部"
+            },
+			{
+                "title": "鬼吹灯",
+                "url": "https://xiongod.github.io/gcd1/data.json",
+                "sort": "3",
+                "published": "第1-3部"
+            },
+			{
+                "title": "鬼吹灯",
+                "url": "https://xiongod.github.io/gcd1/data.json",
+                "sort": "3",
+                "published": "第4-6部"
             }
 		]
 	},
