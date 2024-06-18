@@ -263,6 +263,18 @@
                 "url": "https://xiongod.github.io/sdyxz/json/data.json",
                 "sort": "4",
                 "published": "全集"
+            },
+			{
+                "title": "神雕侠侣",
+                "url": "https://xiongod.github.io/sdxl/json/data.json",
+                "sort": "4",
+                "published": "全集"
+            },
+			{
+                "title": "书剑恩仇录",
+                "url": "https://xiongod.github.io/sjecl/json/data.json",
+                "sort": "4",
+                "published": "全集"
             }
 		]
 	},
