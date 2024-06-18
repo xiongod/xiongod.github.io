@@ -1,85 +1,96 @@
-// ½«Ò»¸öÊı×é´æ´¢µ½cookieÖĞ
+// å°†ä¸€ä¸ªæ•°ç»„å­˜å‚¨åˆ°cookieä¸­
 function setCookieWithArray(name, cookieValue) {
     const date = new Date();
-    date.setTime(date.getTime() + (100*365 * 24 * 60 * 60 * 1000)); // 100ÄêºóµÄÊ±¼ä
-    const expires = "; expires=" + date.toUTCString(); // UTC¸ñÊ½µÄ¹ıÆÚÊ±¼ä
-    //var cookieValue = JSON.stringify(array); // ½«Êı×é×ª»»ÎªJSON×Ö·û´®
-    document.cookie = name + "=" + encodeURIComponent(cookieValue) + expires + "; path=/"; // Ğ´Èëcookie£¬²¢¶ÔÖµ½øĞĞ±àÂë
+    date.setTime(date.getTime() + (100*365 * 24 * 60 * 60 * 1000)); // 100å¹´åçš„æ—¶é—´
+    const expires = "; expires=" + date.toUTCString(); // UTCæ ¼å¼çš„è¿‡æœŸæ—¶é—´
+    //var cookieValue = JSON.stringify(array); // å°†æ•°ç»„è½¬æ¢ä¸ºJSONå­—ç¬¦ä¸²
+    document.cookie = name + "=" + encodeURIComponent(cookieValue) + expires + "; path=/"; // å†™å…¥cookieï¼Œå¹¶å¯¹å€¼è¿›è¡Œç¼–ç 
 }
 
-// ´ÓcookieÖĞ¶ÁÈ¡²¢½âÎöÊı×é
+// ä»cookieä¸­è¯»å–å¹¶è§£ææ•°ç»„
 function getCookieWithArray(name) {
     const cookieValue = "; " + document.cookie;
     const parts = cookieValue.split("; " + name + "=");
     if (parts.length === 2) {
-        return parts[1]; // ½âÎö²¢·µ»ØÊı×é
+        return parts[1]; // è§£æå¹¶è¿”å›æ•°ç»„
     }
-    return ""; // Èç¹ûÃ»ÓĞÕÒµ½cookie£¬·µ»Ønull
+    return ""; // å¦‚æœæ²¡æœ‰æ‰¾åˆ°cookieï¼Œè¿”å›null
 }
 
-// ½«Ò»¸öÊı×é´æ´¢µ½cookieÖĞ£¨²¥·ÅÊ±¼ä£©
+// å°†ä¸€ä¸ªæ•°ç»„å­˜å‚¨åˆ°cookieä¸­ï¼ˆæ’­æ”¾æ—¶é—´ï¼‰
 function setPlayTimeWithArray(name, cookieValue) {
     const date = new Date();
-    date.setTime(date.getTime() + (100*365 * 24 * 60 * 60 * 1000)); // 100ÄêºóµÄÊ±¼ä
-    const expires = "; expires=" + date.toUTCString(); // UTC¸ñÊ½µÄ¹ıÆÚÊ±¼ä
-    //var cookieValue = JSON.stringify(array); // ½«Êı×é×ª»»ÎªJSON×Ö·û´®
-    document.cookie = name + "=" + encodeURIComponent(cookieValue) + expires + "; path=/"; // Ğ´Èëcookie£¬²¢¶ÔÖµ½øĞĞ±àÂë
+    date.setTime(date.getTime() + (100*365 * 24 * 60 * 60 * 1000)); // 100å¹´åçš„æ—¶é—´
+    const expires = "; expires=" + date.toUTCString(); // UTCæ ¼å¼çš„è¿‡æœŸæ—¶é—´
+    //var cookieValue = JSON.stringify(array); // å°†æ•°ç»„è½¬æ¢ä¸ºJSONå­—ç¬¦ä¸²
+    document.cookie = name + "=" + cookieValue + expires + "; path=/"; // å†™å…¥cookieï¼Œå¹¶å¯¹å€¼è¿›è¡Œç¼–ç 
 }
 
-// ´ÓcookieÖĞ¶ÁÈ¡²¢½âÎöÊı×é£¨²¥·ÅÊ±¼ä£©
+// ä»cookieä¸­è¯»å–å¹¶è§£ææ•°ç»„ï¼ˆæ’­æ”¾æ—¶é—´ï¼‰
 function getPlayTimeWithArray(name) {
     const cookieValue = "; " + document.cookie;
     const parts = cookieValue.split("; " + name + "=");
+    //console.log("parts:"+parts)
     if (parts.length === 2) {
-        return parts[1]; // ½âÎö²¢·µ»ØÊı×é
+        // console.log("parts[1]:"+parts[1])
+        return parts[1]; // è§£æå¹¶è¿”å›æ•°ç»„
     }
-    return ""; // Èç¹ûÃ»ÓĞÕÒµ½cookie£¬·µ»Ønull
+    return ""; // å¦‚æœæ²¡æœ‰æ‰¾åˆ°cookieï¼Œè¿”å›null
 }
 
-// ĞÂÔö»òÕß¸üĞÂ²¥·ÅÊ±¼ä
+// æ–°å¢æˆ–è€…æ›´æ–°æ’­æ”¾æ—¶é—´
 function setPlayTimeToCookie(musicId, playTime){
-    //Ê×ÏÈ½«ÒÑ¾­´æµÄcookieÈ¡³öÀ´
+    // console.log("musicId:"+musicId)
+    // console.log("playTime:"+playTime)
+    //é¦–å…ˆå°†å·²ç»å­˜çš„cookieå–å‡ºæ¥
     var  playTimeStr = getPlayTimeWithArray("playTime")
+    //console.log("playTimeStr:"+playTimeStr)
     let playTimeMap = null
-    // Èç¹ûÎª¿ÕÔòĞÂÔöÒ»¸ömap£¬Èç¹û²»Îª¿Õ£¬Ôò½âÎömap
+    // å¦‚æœä¸ºç©ºåˆ™æ–°å¢ä¸€ä¸ªmapï¼Œå¦‚æœä¸ä¸ºç©ºï¼Œåˆ™è§£æmap
     if (null  == playTimeStr || playTimeStr == ""){
         playTimeMap = new Map();
         playTimeMap.set(musicId, playTime);
     }else{
+        playTimeStr = playTimeStr.split(";")[0]
+        // console.log("playTimeStr:"+playTimeStr)
         let playTimeList = JSON.parse(playTimeStr);
         playTimeMap = new Map(playTimeList);
         playTimeMap.set(musicId, playTime);
     }
-    // ½«map´æÈëcookieÖĞ
+    // å°†mapå­˜å…¥cookieä¸­
     setPlayTimeWithArray("playTime", JSON.stringify(Array.from(playTimeMap.entries())));
 }
 
-// É¾³ıÒÑ¾­²¥·ÅÍê³ÉµÄÒôÆµµÄcookie
+// åˆ é™¤å·²ç»æ’­æ”¾å®Œæˆçš„éŸ³é¢‘çš„cookie
 function deletePlayTimeToCookie(musicId){
-    //Ê×ÏÈ½«ÒÑ¾­´æµÄcookieÈ¡³öÀ´
+    //é¦–å…ˆå°†å·²ç»å­˜çš„cookieå–å‡ºæ¥
     var  playTimeStr = getPlayTimeWithArray("playTime")
     let playTimeMap = null
-    // Èç¹ûÎª¿ÕÔòĞÂÔöÒ»¸ömap£¬Èç¹û²»Îª¿Õ£¬Ôò½âÎömap
+    // å¦‚æœä¸ºç©ºåˆ™æ–°å¢ä¸€ä¸ªmapï¼Œå¦‚æœä¸ä¸ºç©ºï¼Œåˆ™è§£æmap
     if (null  == playTimeStr || playTimeStr == ""){
-        // ²»×ö´¦Àí
+        // ä¸åšå¤„ç†
     }else{
+        playTimeStr = playTimeStr.split(";")[0]
         let playTimeList = JSON.parse(playTimeStr);
         playTimeMap = new Map(playTimeList);
         playTimeMap.delete(musicId);
     }
-    // ½«map´æÈëcookieÖĞ
+    // å°†mapå­˜å…¥cookieä¸­
     setPlayTimeWithArray("playTime", JSON.stringify(Array.from(playTimeMap.entries())));
 }
 
-// »ñÈ¡µ±Ç°ÒôÆµ²¥·Åµ½ÁËµÄÊ±¼ä
+// è·å–å½“å‰éŸ³é¢‘æ’­æ”¾åˆ°äº†çš„æ—¶é—´
 function getPlayTimeToCookie(musicId){
-    //Ê×ÏÈ½«ÒÑ¾­´æµÄcookieÈ¡³öÀ´
+    //é¦–å…ˆå°†å·²ç»å­˜çš„cookieå–å‡ºæ¥
     var  playTimeStr = getPlayTimeWithArray("playTime")
+    // console.log("playTimeStr: " + playTimeStr)
     let playTimeMap = null
-    // Èç¹ûÎª¿ÕÔòĞÂÔöÒ»¸ömap£¬Èç¹û²»Îª¿Õ£¬Ôò½âÎömap
+    // å¦‚æœä¸ºç©ºåˆ™æ–°å¢ä¸€ä¸ªmapï¼Œå¦‚æœä¸ä¸ºç©ºï¼Œåˆ™è§£æmap
+    //console.log("playTimeStr: " + playTimeStr)
     if (null  == playTimeStr || playTimeStr == ""){
         return 0
     }else{
+        playTimeStr = playTimeStr.split(";")[0]
         let playTimeList = JSON.parse(playTimeStr);
         playTimeMap = new Map(playTimeList);
         var time = playTimeMap.get(musicId);

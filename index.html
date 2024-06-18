@@ -92,8 +92,9 @@
         audio.src = audioFiles[index].url;
 
         // 从cookie中取出来播放记录
+        // console.log(id)
         var playTime = getPlayTimeToCookie(id)
-        console.log("播放时间："+playTime)
+        //console.log("播放时间："+playTime)
         audio.currentTime = playTime;
 
         audio.load();
@@ -171,13 +172,13 @@
 
     // 检查并打印当前播放时间的函数，把播放到第几秒的数据，存到cookie中
     function checkTime() {
-        console.log("保存播放时间")
+        // console.log("保存播放时间")
         const audioPlayer = document.getElementById('audio-player');
         // 确保音频已经加载（可能不是必须的，但为了避免错误是个好习惯）
-        if (audioPlayer.readyState >= 10) { // readyState 3 意味着音频已经加载足够的数据可以播放
+        if (audioPlayer.readyState >= 3) { // readyState 3 意味着音频已经加载足够的数据可以播放
             // 存当前播放时间到cookie
-            console.log("音乐id："+musicId )
-            console.log("播放时间："+audioPlayer.currentTime )
+            // console.log("音乐id："+musicId )
+            // console.log("播放时间："+audioPlayer.currentTime )
             setPlayTimeToCookie(musicId,audioPlayer.currentTime)
             //console.log('当前播放时间: ' + audioPlayer.currentTime + ' 秒');
         }
