@@ -287,7 +287,25 @@
                 "url": "https://xiongod.github.io/tlbb2/json/data.json",
                 "sort": "4",
                 "published": "第二部"
-            }
+            },
+			{
+				"title": "雪山飞狐",
+				"url": "https://xiongod.github.io/xsfh/json/data.json",
+				"sort": "4",
+				"published": "第二部"
+			},
+			{
+				"title": "笑傲江湖",
+				"url": "https://xiongod.github.io/xajh/json/data.json",
+				"sort": "4",
+				"published": "第二部"
+			},
+			{
+				"title": "倚天屠龙记",
+				"url": "https://xiongod.github.io/yttlj/json/data.json",
+				"sort": "4",
+				"published": "第二部"
+			}
 		]
 	},
 	{
