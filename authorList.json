@@ -340,6 +340,18 @@
                 "url": "https://xiongod.github.io/gcd2/json/data.json",
                 "sort": "3",
                 "published": "第4-6部"
+            },
+			{
+                "title": "庆余年",
+                "url": "https://xiongod.github.io/qyn1/json/data.json",
+                "sort": "3",
+                "published": "第一部"
+            },
+			{
+                "title": "庆余年",
+                "url": "https://xiongod.github.io/qyn2/json/data.json",
+                "sort": "3",
+                "published": "第二部"
             }
 		]
 	},
